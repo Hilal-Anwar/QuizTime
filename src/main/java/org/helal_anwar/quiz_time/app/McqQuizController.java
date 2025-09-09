@@ -75,6 +75,7 @@ public class McqQuizController implements Initializable {
                         quizTaker.timerLabel2.getText()));
                 try {
                     quizDashboard.modalPane.show(v.load());
+
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
