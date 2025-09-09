@@ -1,0 +1,9 @@
+#box{
+    -fx-background-color:white;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+#title{
+    -fx-font-family: "Gilroy-Bold";
+    -fx-font-size: 25px;
+}

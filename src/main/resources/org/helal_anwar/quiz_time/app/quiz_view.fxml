@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox id="data_viewer" spacing="5.0" stylesheets="@quiz_view_style.css" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.helal_anwar.quiz_time.app.QuizView">
+   <children>
+      <HBox alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Label id="num_name" fx:id="number" text="#" />
+            <Label id="name" fx:id="name" text="Quiz Name" />
+            <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label id="num_name" fx:id="score" text="0" />
+               </children>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" spacing="30.0">
+         <children>
+            <VBox>
+               <children>
+                  <Label fx:id="total" text="No. of Questions : " />
+                  <Label fx:id="category" text="Category : " />
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label fx:id="level" text="Level : " />
+                  <Label fx:id="type" text="Type : " />
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

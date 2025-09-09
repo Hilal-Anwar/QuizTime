@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane prefWidth="444.0" stylesheets="@splash.css" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.helal_anwar.quiz_time.app.SplashScreen">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="444.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@background.png" />
+         </image>
+      </ImageView>
+      <ProgressBar fx:id="progress" maxWidth="1.7976931348623157E308" prefHeight="5.0" progress="0.01" StackPane.alignment="BOTTOM_CENTER">
+         <StackPane.margin>
+            <Insets bottom="10.0" />
+         </StackPane.margin>
+      </ProgressBar>
+   </children>
+</StackPane>

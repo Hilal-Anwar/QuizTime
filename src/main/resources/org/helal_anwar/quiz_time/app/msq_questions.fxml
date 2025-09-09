@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox id="data_viewer" fx:id="question_box" spacing="15.0" stylesheets="@root_style.css" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.helal_anwar.quiz_time.app.TrueOrFalseQuizController">
+    <padding>
+        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+    </padding>
+    <Label fx:id="question_no" style="-fx-font-size: 18px;" text="Question 1" wrapText="true" />
+    <Label fx:id="questionLabel" style="-fx-font-size: 18px;" text=" What is Lorem Ipsum?&#10;Lorem Ipsum is simply dummy&#10; text of the printing and &#10;typesetting industry." wrapText="true" />
+    <VBox spacing="15.0">
+        <CheckBox fx:id="optionA">
+        </CheckBox>
+        <CheckBox fx:id="optionB" />
+        <CheckBox fx:id="optionC" />
+        <CheckBox fx:id="optionD" />
+    </VBox>
+    <HBox spacing="10.0">
+        <Button onAction="#handleSubmit" text="Submit Answer" />
+    </HBox>
+</VBox>

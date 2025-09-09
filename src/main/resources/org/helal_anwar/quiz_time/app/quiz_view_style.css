@@ -1,0 +1,21 @@
+#data_viewer {
+    -fx-background-color: #fafafa;
+    -fx-font-weight: bold;
+    -fx-border-color: transparent;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.12, -1.0, 2.0);
+
+}
+#data_viewer:hover {
+    -fx-background-color: rgba(67, 25, 207, 0.1);
+    -fx-font-weight: bold;
+    -fx-border-color: transparent;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, white, 10, 0.12, -1.0, 2.0);
+}
+#num_name{
+    -fx-font-size: 20px;
+}
+#name{
+    -fx-font-size: 25px;
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="empty_login" maxHeight="660.0" maxWidth="444.0" minHeight="660.0" minWidth="444.0" prefHeight="660.0"
+           prefWidth="444.0" stylesheets="@root_style.css" xmlns="http://javafx.com/javafx/24"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.helal_anwar.quiz_time.app.EmptyLogin">
+    <ImageView fitHeight="667.0" fitWidth="454.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@background.png"/>
+    </ImageView>
+    <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+          prefHeight="667.0" prefWidth="446.0" style="-fx-background-color: #000000; -fx-opacity: 0.8;"
+          StackPane.alignment="CENTER"/>
+</StackPane>

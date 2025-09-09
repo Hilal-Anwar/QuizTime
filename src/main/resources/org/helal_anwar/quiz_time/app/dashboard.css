@@ -1,0 +1,21 @@
+#roundButton{
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.12, -1.0, 2.0);
+    -fx-background-color:#4415d3;
+    -fx-background-radius: 20;
+}
+#customListView{
+    -fx-background-color: #00000000;
+    -fx-border-color: transparent;
+    -fx-background-radius: 10;
+}
+#loading{
+    -fx-background-color: rgb(0, 0, 0);
+    -fx-border-color: transparent;
+    -fx-opacity: 0.75;
+    -fx-background-radius: 10;
+}
+#customListView .list-cell {
+    -fx-background-color: white;
+    -fx-padding: 5;
+    -fx-background-radius: 10;
+}
