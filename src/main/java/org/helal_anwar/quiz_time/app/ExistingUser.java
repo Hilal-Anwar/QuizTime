@@ -35,7 +35,8 @@ public class ExistingUser implements Initializable {
     private void log_in() {
         if (emptyLogin.splashScreen.db.isValidUser(userId.getText(), password.getPassword())) {
             FXMLLoader fxmlLoader = new FXMLLoader(QuizResourceLoader.loadURL("dashboard.fxml"));
-            fxmlLoader.setControllerFactory(_ -> new QuizDashboard(emptyLogin.splashScreen.categoryMap,emptyLogin.splashScreen.db,userId.getText(),emptyLogin.splashScreen.defaultQuestions));
+            fxmlLoader.setControllerFactory(_ -> new QuizDashboard(emptyLogin.splashScreen.categoryMap,emptyLogin.splashScreen.db,
+                    userId.getText(),emptyLogin.splashScreen.defaultQuestions,emptyLogin.splashScreen));
             try {
                 emptyLogin.splashScreen.stage.setScene(new Scene(fxmlLoader.load()));
             } catch (IOException e) {

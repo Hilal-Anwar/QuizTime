@@ -37,11 +37,12 @@ public class QuizPref implements Initializable {
     @FXML
     private ComboBox<String> type;
     ListView<VBox> listView;
-    LinkedHashMap<String,Long> category;
+    LinkedHashMap<String, Long> category;
     Connection connection;
     String userName;
     ObservableList<VBox> list;
-    public QuizPref(ListView<VBox> listView, LinkedHashMap<String,Long> category, DatabaseLoader db, String userName,ObservableList<VBox> list) {
+
+    public QuizPref(ListView<VBox> listView, LinkedHashMap<String, Long> category, DatabaseLoader db, String userName, ObservableList<VBox> list) {
         this.listView = listView;
         this.category = category;
         connection = db.getConnection();
@@ -62,7 +63,7 @@ public class QuizPref implements Initializable {
     void apply(ActionEvent event) {
         FXMLLoader fxmlLoader = new FXMLLoader(QuizResourceLoader.loadURL("quiz_view.fxml"));
         QuizView quizView = new QuizView(category_list.getSelectionModel().getSelectedItem()
-                , level.getSelectionModel().getSelectedItem(), name.getText(), ""+(list.size()+1),
+                , level.getSelectionModel().getSelectedItem(), name.getText(), "" + (list.size() + 1),
                 "0", no_question.getValueFactory().getValue().toString(), type.getSelectionModel().getSelectedItem());
         var x = quizView.toString().split(",");
         updateQuizDB(x);
@@ -95,12 +96,22 @@ public class QuizPref implements Initializable {
 
     }
 
-    private String getArrayAsString(ArrayList<String[]> array) {
-        StringBuilder s= new StringBuilder("[");
-        for (int i=0;i<array.size()-1;i++) {
-            s.append(Arrays.toString(array.get(i))).append(",");
+    static String getArrayAsString(ArrayList<String[]> array) {
+        StringBuilder s = new StringBuilder("[");
+        for (int i = 0; i < array.size() - 1; i++) {
+            s.append(getArrayAsString(array.get(i))).append(",");
         }
-        s.append(Arrays.toString(array.getLast())).append("]");
+        s.append(getArrayAsString(array.getLast())).append("]");
+        return s.toString();
+    }
+
+    static String getArrayAsString(String[] array) {
+        StringBuilder s = new StringBuilder("[");
+        for (int i = 0; i < array.length - 1; i++) {
+            s.append(array[i].trim()).append(",");
+        }
+        s.append(array[array.length - 1].trim()).append("]");
+        System.out.println(s);
         return s.toString();
     }
 
@@ -110,7 +121,7 @@ public class QuizPref implements Initializable {
         Matcher matcher = pattern.matcher(str);
         while (matcher.find()) {
             String group = matcher.group(1);
-            String[] elements = Arrays.toString(group.split(",")).
+            String[] elements = getArrayAsString(group.split(",")).
                     replace("[", "").
                     replace("]", "").split(",");
             list.add(elements);

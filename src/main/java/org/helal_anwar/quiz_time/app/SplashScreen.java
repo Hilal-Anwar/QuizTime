@@ -46,10 +46,25 @@ public class SplashScreen implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        loginScreen();
+        startTimer();
+    }
+
+     void loginScreen() {
         fxmlLoader = new FXMLLoader(QuizResourceLoader.loadURL("login_setup.fxml"));
         emptyLogin = new EmptyLogin(this);
         fxmlLoader.setControllerFactory(_ -> emptyLogin);
-        startTimer();
+    }
+    void logOutScreen() {
+        fxmlLoader = new FXMLLoader(QuizResourceLoader.loadURL("login_setup.fxml"));
+        emptyLogin = new EmptyLogin(this);
+        fxmlLoader.setControllerFactory(_ -> emptyLogin);
+        try {
+            stage.setScene(new Scene(fxmlLoader.load()));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     private void startTimer() {

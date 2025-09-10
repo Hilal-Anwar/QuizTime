@@ -1,0 +1,8 @@
+.label{
+    -fx-font-family: Gilroy-Bold;
+    -fx-font-size: 52;
+    -fx-text-fill: #fafafa;
+}
+.label:hover{
+    -fx-text-fill: yellow;
+}

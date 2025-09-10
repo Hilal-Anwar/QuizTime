@@ -8,8 +8,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<StackPane xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.helal_anwar.quiz_time.app.Navigation">
-    <ImageView fitHeight="750.0" fitWidth="432.0" pickOnBounds="true" StackPane.alignment="CENTER">
+<StackPane stylesheets="@nav.css" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.helal_anwar.quiz_time.app.Navigation">
+    <ImageView fitHeight="750.0" fitWidth="600.0" pickOnBounds="true" StackPane.alignment="CENTER">
         <Image url="@8150248.jpg" />
     </ImageView>
     <ImageView fx:id="closeButton" fitHeight="24.0" fitWidth="24.0" onMouseClicked="#onClose" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_RIGHT">
@@ -19,17 +19,17 @@
         <Image url="@close_white.png" />
     </ImageView>
     <VBox alignment="CENTER" spacing="25.0">
-        <Label text="Statistics" textFill="#fafafa">
+        <Label onMouseClicked="#onStat" text="Statistics" textFill="#fafafa">
             <font>
                 <Font name="☞Gilroy-Bold" size="52.0" />
             </font>
         </Label>
-        <Label text="Logout" textFill="#fafafa">
+        <Label onMouseClicked="#logout" text="Logout" textFill="#fafafa">
             <font>
                 <Font name="☞Gilroy-Bold" size="52.0" />
             </font>
         </Label>
-        <Label text="About" textFill="#fafafa">
+        <Label onMouseClicked="#about" text="About" textFill="#fafafa">
             <font>
                 <Font name="☞Gilroy-Bold" size="52.0" />
             </font>

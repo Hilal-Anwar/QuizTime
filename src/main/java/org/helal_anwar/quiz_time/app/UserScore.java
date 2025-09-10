@@ -1,14 +1,12 @@
 package org.helal_anwar.quiz_time.app;
 
 public class UserScore {
-    private  String name;
-    private  int score;
-    private  String duration; // Format: HH:mm:ss
+    private String name;
+    private int score;
 
-    public UserScore(String name, int score, String duration) {
+    public UserScore(String name, int score) {
         this.name = name;
         this.score = score;
-        this.duration = duration;
     }
 
     public String getName() {
@@ -19,9 +17,6 @@ public class UserScore {
         return score;
     }
 
-    public String getDuration() {
-        return duration;
-    }
 
     public void setName(String name) {
         this.name = name;
@@ -31,7 +26,4 @@ public class UserScore {
         this.score = score;
     }
 
-    public void setDuration(String duration) {
-        this.duration = duration;
-    }
 }

@@ -8,31 +8,49 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class ScoreTable implements Initializable {
+    private final Connection connection;
     public TableView<UserScore> table;
     public TableColumn<UserScore, String> name;
     public TableColumn<UserScore, Integer> score;
-    public TableColumn<UserScore, String> duration;
+
+    public ScoreTable(Connection connection) {
+        this.connection = connection;
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         name.setCellValueFactory(new PropertyValueFactory<>("name"));
         score.setCellValueFactory(new PropertyValueFactory<>("score"));
-        duration.setCellValueFactory(new PropertyValueFactory<>("duration"));
-
-        table.getColumns().addAll(name, score, duration);
-
         ObservableList<UserScore> data = FXCollections.observableArrayList(
-                new UserScore("Alice", 85, "00:05:32"),
-                new UserScore("Bob", 92, "00:04:47"),
-                new UserScore("Charlie", 78, "00:06:15"),
-                new UserScore("Diana", 88, "00:05:01")
+                loadData()
         );
 
         table.setItems(data);
 
+    }
+
+    public ObservableList<UserScore> loadData() {
+        ArrayList<UserScore> userScores = new ArrayList<UserScore>();
+        try (Statement stmt = connection.createStatement();
+             ResultSet rs = stmt.executeQuery("SELECT * FROM user")) {
+
+            while (rs.next()) {
+                String userName = rs.getString("user_name");
+                String bestScore = rs.getString("best_score");
+                userScores.add(new UserScore(userName, Integer.parseInt(bestScore)));
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return FXCollections.observableArrayList(userScores);
     }
 }

@@ -41,6 +41,7 @@ public class McqQuizController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         question_no.setText("Question " + (question.getNum() + 1));
+        System.out.println(question.getOptions());
         questionLabel.setText(question.getQuestion());
         optionA.setText(question.getOptions().getFirst());
         optionB.setText(question.getOptions().get(1));
@@ -72,8 +73,10 @@ public class McqQuizController implements Initializable {
                 v.setControllerFactory(c -> new Overview("" + quizTaker.correctAnswer,
                         "" + quizTaker.correctAnswer * 5,
                         "" + quizTaker.wrongAnswer,
-                        quizTaker.timerLabel2.getText()));
+                        quizTaker.timerLabel2.getText(),quizDashboard.modalPane));
                 try {
+                    quizDashboard.updateScore("" + (quizTaker.correctAnswer * 5));
+                    quizDashboard.updateBestScore();
                     quizDashboard.modalPane.show(v.load());
 
                 } catch (IOException e) {

@@ -45,7 +45,7 @@ public class NewUser implements Initializable {
 
     private void createQuizDashboard() {
         FXMLLoader fxmlLoader = new FXMLLoader(QuizResourceLoader.loadURL("dashboard.fxml"));
-        fxmlLoader.setControllerFactory(_ -> new QuizDashboard(existingUser.emptyLogin.splashScreen.categoryMap,existingUser.emptyLogin.splashScreen.db,userId.getText(), existingUser.emptyLogin.splashScreen.defaultQuestions));
+        fxmlLoader.setControllerFactory(_ -> new QuizDashboard(existingUser.emptyLogin.splashScreen.categoryMap,existingUser.emptyLogin.splashScreen.db,userId.getText(), existingUser.emptyLogin.splashScreen.defaultQuestions, existingUser.emptyLogin.splashScreen));
         try {
             existingUser.emptyLogin.splashScreen.stage.setScene(new Scene(fxmlLoader.load()));
         } catch (IOException e) {
