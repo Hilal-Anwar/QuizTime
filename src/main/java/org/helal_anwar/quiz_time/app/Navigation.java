@@ -50,12 +50,16 @@ public class Navigation implements Initializable {
 
     @FXML
     void about(MouseEvent event) {
-
+        FXMLLoader fxmlLoader = new FXMLLoader(QuizResourceLoader.loadURL("about.fxml"));
+        try {
+            modalPane.show(fxmlLoader.load());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
     void logout(MouseEvent event) {
-           Scene scene =modalPane.getParent().getScene();
            splashScreen.logOutScreen();
     }
 

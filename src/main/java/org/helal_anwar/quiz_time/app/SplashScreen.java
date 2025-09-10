@@ -61,6 +61,7 @@ public class SplashScreen implements Initializable {
         fxmlLoader.setControllerFactory(_ -> emptyLogin);
         try {
             stage.setScene(new Scene(fxmlLoader.load()));
+            stage.setResizable(false);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

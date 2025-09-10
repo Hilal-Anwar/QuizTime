@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="TOP_CENTER" maxHeight="512.0" maxWidth="410.0" minHeight="512.0" minWidth="410.0" prefHeight="512.0" prefWidth="410.0" spacing="5.0" style="-fx-background-color: #fafafa; -fx-background-radius: 10; -fx-border-radius: 10;" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Quiz Time">
+         <font>
+            <Font name="☞Gilroy-Bold" size="31.0" />
+         </font>
+         <fill>
+            <LinearGradient cycleMethod="REFLECT" endX="0.1848341232227489" endY="0.5971563981042655" startX="0.2606635071090047" startY="0.31279620853080575">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2666666805744171" green="0.08235294371843338" blue="0.8274509906768799" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.7009259462356567" green="0.0555555559694767" blue="1.0" opacity="0.7099999785423279" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fast, fun, and smart quizzes—built for curious minds.">
+         <font>
+            <Font name="☞Gilroy-Bold" size="11.0" />
+         </font>
+         <fill>
+            <LinearGradient cycleMethod="REFLECT" endX="0.1848341232227489" endY="0.5971563981042655" startX="0.2606635071090047" startY="0.31279620853080575">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.2666666805744171" green="0.08235294371843338" blue="0.8274509906768799" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.7009259462356567" green="0.0555555559694767" blue="1.0" opacity="0.7099999785423279" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <TextArea text="What is QuizTime?&#10;QuizTime is a modern JavaFX quiz app that brings trivia to life with a clean, responsive UI and questions fetched from the Open Trivia Database. Create an account, customize your quizzes, and track your progress over time.&#10;&#10;Key Features&#10;•  Personalized accounts: Register, log in, and manage your profile&#10;•  Flexible quizzes: Choose categories, difficulty (Easy/Medium/Hard), and types (Multiple Choice or True/False)&#10;•  Custom settings: Pick how many questions you want per quiz&#10;•  Real-time feedback: See correct/incorrect answers instantly&#10;•  Timer support: Add a challenge with timed sessions&#10;•  Progress tracking: View your history and best scores&#10;•  Smooth experience: Modern UI, theming, and animations&#10;•  Works offline for user data: Preferences and scores stored locally via SQLite&#10;&#10;How It Works&#10;1) Sign up or log in&#10;2) Configure your quiz (category, difficulty, type, number of questions)&#10;3) Take the quiz with instant scoring and a timer&#10;4) Review results and monitor improvement over time&#10;&#10;Powered By&#10;•  Java 21, JavaFX 24, Maven&#10;•  Open Trivia Database API for up-to-date questions&#10;•  SQLite for secure local storage&#10;&#10;Why You’ll Love It&#10;QuizTime balances simplicity and depth: quick to start, customizable when you want more control, and designed to help you learn, practice, and have fun.&#10;&#10;Privacy&#10;Your quiz preferences and scores are stored locally on your device in a lightweight SQLite database.&#10;&#10;Support&#10;Found an issue or have a feature idea? Visit our repository’s Issues and Discussions pages.&#10;•  Issues: https://github.com/yourusername/QuizTime/issues&#10;•  Discussions: https://github.com/yourusername/QuizTime/discussions&#10;&#10;Credits&#10;Made with love by Helal Anwar, with thanks to the Open Trivia Database, AtlantaFX, Ikonli, and the JavaFX community.&#10;&#10;Short version (if you need a compact variant)&#10;QuizTime is a modern JavaFX quiz app powered by the Open Trivia Database. Create an account, customize quizzes by category, difficulty, and type, get real-time feedback, and track your best scores—backed by local SQLite storage. Fast, clean, and fun." wrapText="true" VBox.vgrow="ALWAYS">
+         <font>
+            <Font name="☞Gilroy-Bold" size="12.0" />
+         </font>
+      </TextArea>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>
