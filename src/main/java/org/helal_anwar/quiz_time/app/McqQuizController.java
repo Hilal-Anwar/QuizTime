@@ -1,6 +1,5 @@
 package org.helal_anwar.quiz_time.app;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -51,7 +50,7 @@ public class McqQuizController implements Initializable {
 
 
     @FXML
-    private void handleSubmit(ActionEvent event) {
+    private void handleSubmit() {
         RadioButton selected = (RadioButton) optionsGroup.getSelectedToggle();
         if (selected != null) {
             String answer = selected.getText();

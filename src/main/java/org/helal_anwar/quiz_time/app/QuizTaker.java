@@ -38,19 +38,26 @@ public class QuizTaker implements Initializable {
     int wrongAnswer = 0;
     List<Question> questions;
     QuizDashboard quizDashboard;
-    public QuizTaker(List<Question> questions,QuizDashboard quizDashboard) {
-            this.questions = questions;
-            this.quizDashboard = quizDashboard;
+
+    public QuizTaker(List<Question> questions, QuizDashboard quizDashboard) {
+        this.questions = questions;
+        this.quizDashboard = quizDashboard;
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         questionList.clear();
         if (questions.isEmpty())
-            questions=quizDashboard.defaultQuestions;
-       for (Question question : questions) {
-            var v = new FXMLLoader(QuizTime.class.getResource("mcq_questions.fxml"));
-            v.setControllerFactory(_ -> new McqQuizController(question, this,quizDashboard));
+            questions = quizDashboard.defaultQuestions;
+        for (Question question : questions) {
+            FXMLLoader v;
+            if (question.getOptions().size() > 2) {
+                v = new FXMLLoader(QuizTime.class.getResource("mcq_questions.fxml"));
+                v.setControllerFactory(_ -> new McqQuizController(question, this, quizDashboard));
+            } else {
+                v = new FXMLLoader(QuizTime.class.getResource("true_false_questions.fxml"));
+                v.setControllerFactory(_ -> new TrueOrFalseQuizController(question, this, quizDashboard));
+            }
             try {
                 VBox qus = v.load();
                 VBox.setMargin(qus, new Insets(10));
@@ -89,13 +96,15 @@ public class QuizTaker implements Initializable {
         if (index > 0)
             question_box.getChildren().set(0, questionList.get(--index));
     }
+
     private String formatTime(int seconds) {
         LocalTime time = LocalTime.MIDNIGHT.plusSeconds(seconds);
         return time.format(timeFormatter);
     }
+
     @FXML
-    void onClose(){
-       quizDashboard.modalPane.hide();
-       quizDashboard.questions=null;
+    void onClose() {
+        quizDashboard.modalPane.hide();
+        quizDashboard.questions = null;
     }
 }
