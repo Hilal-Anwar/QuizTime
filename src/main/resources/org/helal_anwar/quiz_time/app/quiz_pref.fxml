@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox id="box" alignment="CENTER" maxHeight="270.0" maxWidth="320.0" minHeight="270.0" minWidth="320.0" stylesheets="@pref.css" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.helal_anwar.quiz_time.app.QuizPref">
+<VBox id="box" alignment="CENTER" maxHeight="300.0" maxWidth="350.0" minHeight="300.0" minWidth="350.0" stylesheets="@pref.css" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.helal_anwar.quiz_time.app.QuizPref">
    <children>
       <Label id="title" text="Create Quiz">
          <VBox.margin>
