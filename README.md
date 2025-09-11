@@ -316,6 +316,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <img width="747" height="973" alt="Screenshot 2025-09-11 095238" src="https://github.com/user-attachments/assets/51e79ffe-afa4-462a-bb40-1700c6e2a616" />
 <img width="557" height="861" alt="Screenshot 2025-09-11 095201" src="https://github.com/user-attachments/assets/6058fb6b-59bc-4025-935d-2c6220be5c0d" />
 <img width="558" height="866" alt="Screenshot 2025-09-11 095113" src="https://github.com/user-attachments/assets/a56e733b-78a3-4a98-94a5-451bcabcff22" />
-<img width="1030" height="675" alt="Screenshot 2025-09-05 095322" src="https://github.com/user-attachments/assets/c5be3df7-9860-4661-9907-c22b3483b763" />
 
 Made with ❤️ by [Helal Anwar](https://github.com/helal_anwar)
