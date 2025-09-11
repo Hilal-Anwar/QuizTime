@@ -1,5 +1,9 @@
 # QuizTime 🧠
 
+
+https://github.com/user-attachments/assets/93a0c4f3-35d5-4dd8-baed-40a72e68adcc
+
+
 A modern, interactive Java-based quiz application built with JavaFX that provides an engaging trivia experience with questions fetched from the Open Trivia Database API.
 
 ## 📋 Table of Contents
@@ -302,5 +306,16 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Happy Quizzing! 🎉**
+<img width="559" height="838" alt="Screenshot 2025-09-11 102928" src="https://github.com/user-attachments/assets/11a8c314-d979-4c17-a033-49fc0e24ca55" />
+<img width="750" height="979" alt="Screenshot 2025-09-11 095259" src="https://github.com/user-attachments/assets/02a9cf4e-d3d5-42ce-bce8-8589eebd8534" />
+<img width="755" height="974" alt="Screenshot 2025-09-11 095320" src="https://github.com/user-attachments/assets/e7ec9f2f-95a1-4155-b192-8bd1dc6329ca" />
+<img width="750" height="975" alt="Screenshot 2025-09-11 095356" src="https://github.com/user-attachments/assets/2f91b54a-75dd-4a12-9f7f-606eb03b2f26" />
+<img width="754" height="974" alt="Screenshot 2025-09-11 095422" src="https://github.com/user-attachments/assets/ae86f0dd-234a-4527-b2f6-7eea2741a93c" />
+<img width="750" height="979" alt="Screenshot 2025-09-11 095442" src="https://github.com/user-attachments/assets/4e4363fe-12f9-4098-b2d9-691c46c6ec49" />
+<img width="758" height="981" alt="Screenshot 2025-09-11 095500" src="https://github.com/user-attachments/assets/5948176a-8c2a-427f-9304-94a30a126d80" />
+<img width="747" height="973" alt="Screenshot 2025-09-11 095238" src="https://github.com/user-attachments/assets/51e79ffe-afa4-462a-bb40-1700c6e2a616" />
+<img width="557" height="861" alt="Screenshot 2025-09-11 095201" src="https://github.com/user-attachments/assets/6058fb6b-59bc-4025-935d-2c6220be5c0d" />
+<img width="558" height="866" alt="Screenshot 2025-09-11 095113" src="https://github.com/user-attachments/assets/a56e733b-78a3-4a98-94a5-451bcabcff22" />
+<img width="1030" height="675" alt="Screenshot 2025-09-05 095322" src="https://github.com/user-attachments/assets/c5be3df7-9860-4661-9907-c22b3483b763" />
 
 Made with ❤️ by [Helal Anwar](https://github.com/helal_anwar)
