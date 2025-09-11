@@ -9,15 +9,12 @@ public class DatabaseLoader {
 
     public DatabaseLoader(String name) {
         this.name = name;
-        System.out.println(name);
         init();
     }
 
     private void init() {
         try {
             connection = DriverManager.getConnection("jdbc:sqlite:" + root_path + "\\" + this.name + ".db");
-
-            System.out.println("Opened database successfully");
         } catch (SQLException e) {
             System.err.println(e.getMessage());
         }
@@ -56,7 +53,6 @@ public class DatabaseLoader {
             pst.setString(2, password);
             pst.setString(3, bestScore);
             pst.executeUpdate();
-            System.out.println("User '" + username + "' inserted successfully.");
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());

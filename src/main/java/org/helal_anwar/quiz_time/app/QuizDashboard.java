@@ -152,7 +152,6 @@ public class QuizDashboard implements Initializable {
             pst.setString(1, String.valueOf(maxScore));
             pst.setString(2, userName);
             int affectedRows = pst.executeUpdate();
-            System.out.println("Updated rows: " + affectedRows);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -163,16 +162,14 @@ public class QuizDashboard implements Initializable {
         String sql = "UPDATE user SET quizzes = ? WHERE user_name = ?";
 
         try (PreparedStatement pst = db.getConnection().prepareStatement(sql)) {
-            System.out.println(selectedQuestionName);
+
             var map = getQuizzes(userName);
             var quizzes = map.get(selectedQuestionName);
             quizzes[4] = score.trim();
-            System.out.println(Arrays.toString(quizzes));
-            System.out.println(map);
+
             pst.setString(1, QuizPref.getArrayAsString(new ArrayList<>(map.values().stream().toList())));
             pst.setString(2, userName);
             int affectedRows = pst.executeUpdate();
-            System.out.println("Updated rows: " + affectedRows);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -222,7 +219,6 @@ public class QuizDashboard implements Initializable {
                 }
 
             } else {
-                System.out.println("User not found.");
             }
 
         } catch (Exception e) {

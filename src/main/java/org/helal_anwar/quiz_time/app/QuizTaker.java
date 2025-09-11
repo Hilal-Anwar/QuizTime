@@ -69,7 +69,6 @@ public class QuizTaker implements Initializable {
         }
         reset.getStyleClass().addAll(Styles.BUTTON_CIRCLE, Styles.FLAT, Styles.SUCCESS);
         quit.getStyleClass().addAll(Styles.BUTTON_CIRCLE, Styles.FLAT, Styles.DANGER);
-        System.out.println(questionList);
         question_box.getChildren().set(0, questionList.getFirst());
         timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
             totalSeconds++;

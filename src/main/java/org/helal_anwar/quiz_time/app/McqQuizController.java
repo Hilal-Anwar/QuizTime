@@ -40,7 +40,6 @@ public class McqQuizController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         question_no.setText("Question " + (question.getNum() + 1));
-        System.out.println(question.getOptions());
         questionLabel.setText(question.getQuestion());
         optionA.setText(question.getOptions().getFirst());
         optionB.setText(question.getOptions().get(1));

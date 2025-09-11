@@ -88,7 +88,6 @@ public class QuizPref implements Initializable {
             pst.setString(1, getArrayAsString(quizzes));
             pst.setString(2, userName);
             int affectedRows = pst.executeUpdate();
-            System.out.println("Updated rows: " + affectedRows);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -111,7 +110,6 @@ public class QuizPref implements Initializable {
             s.append(array[i].trim()).append(",");
         }
         s.append(array[array.length - 1].trim()).append("]");
-        System.out.println(s);
         return s.toString();
     }
 
@@ -145,7 +143,6 @@ public class QuizPref implements Initializable {
                 }
 
             } else {
-                System.out.println("User not found.");
             }
 
         } catch (Exception e) {

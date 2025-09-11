@@ -73,7 +73,6 @@ public class SplashScreen implements Initializable {
             progress.setProgress(progress.getProgress() + 0.0007);
             if (categoryMap != null) {
                 stage.close();
-                System.out.println(categoryMap);
                 stage = new Stage();
                 stage.setTitle("Quiz Time");
                 //stage.setResizable(false);

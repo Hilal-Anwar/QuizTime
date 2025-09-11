@@ -26,7 +26,6 @@ public class Navigation implements Initializable {
         this.name = name;
         this.modalPane = modalPane;
         this.splashScreen = splashScreen;
-        System.out.println(name);
     }
 
     @Override
@@ -44,7 +43,6 @@ public class Navigation implements Initializable {
 
     @FXML
     public void onClose(MouseEvent event) {
-        System.out.println("Close button pressed");
         modalPane.hide();
     }
 
